@@ -1,21 +1,37 @@
-// src/auth/authService.js
-import { users } from "../data/mockData";
+import { ensureSeed } from "../data/mockData.js";
 
-let currentUser = null;
+const LS_AUTH = "ark_auth_user";
+
+export function getUser() {
+  ensureSeed();
+  const raw = localStorage.getItem(LS_AUTH);
+  return raw ? JSON.parse(raw) : null;
+}
 
 export function login(email, password) {
-  const user = users.find(
-    u => u.email === email && u.password === password
+  ensureSeed();
+  const raw = localStorage.getItem("ark_store_v1");
+  const store = raw ? JSON.parse(raw) : null;
+  if (!store) return { ok: false, error: "Store ontbreekt" };
+
+  const user = store.users.find(
+    (u) => u.email.toLowerCase() === email.toLowerCase() && u.password === password
   );
-  if (!user) throw new Error("Ongeldige inloggegevens");
-  currentUser = user;
-  return user;
+
+  if (!user) return { ok: false, error: "Onjuiste inloggegevens" };
+
+  const safeUser = {
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    role: user.role,
+    clientId: user.clientId ?? null,
+  };
+
+  localStorage.setItem(LS_AUTH, JSON.stringify(safeUser));
+  return { ok: true, user: safeUser };
 }
 
 export function logout() {
-  currentUser = null;
-}
-
-export function getCurrentUser() {
-  return currentUser;
+  localStorage.removeItem(LS_AUTH);
 }
