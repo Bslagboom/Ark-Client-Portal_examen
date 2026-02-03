@@ -4,6 +4,8 @@ import Card from "../components/Card.jsx";
 import Input from "../components/Input.jsx";
 import Button from "../components/Button.jsx";
 import { login } from "../auth/authService.js";
+import logo from "../images/arkdesign-logo-horizontaal-white.png";
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState("admin@ark.nl");
@@ -32,9 +34,9 @@ export default function LoginPage() {
         <Card title={null}>
           <div className="loginBrand">
             <div className="brandMini">
-              <div className="logoTri" />
-              <div className="brandText">ARK DESIGN</div>
+              <img src={logo} alt="Ark Design" className="brandLogo" />
             </div>
+
             <div className="loginH2">Ark Client Portal</div>
           </div>
 
@@ -58,11 +60,6 @@ export default function LoginPage() {
             <Button type="submit">Inloggen</Button>
 
             <div className="muted">Na inloggen wordt je rol bepaald</div>
-
-            <div className="hint">
-              <div><b>PM/Admin:</b> admin@ark.nl / admin</div>
-              <div><b>Klant:</b> jan@klant.nl / 1234</div>
-            </div>
           </form>
         </Card>
       </div>

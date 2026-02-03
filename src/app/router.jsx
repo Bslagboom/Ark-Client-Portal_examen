@@ -4,6 +4,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import Layout from "../components/Layout.jsx";
 import RequireAuth from "../auth/RequireAuth.jsx";
 import RequireRole from "../auth/RequireRole.jsx";
+import { getUser } from "../auth/authService.js";
 
 import LoginPage from "../pages/LoginPage.jsx";
 import DashboardClient from "../pages/DashboardClient.jsx";
@@ -12,14 +13,13 @@ import ProjectClient from "../pages/ProjectClient.jsx";
 import ProjectPM from "../pages/ProjectPM.jsx";
 import AdminUsers from "../pages/AdminUsers.jsx";
 
+
 function ProjectGate() {
-  // Als je ingelogd bent: route naar juiste projectpagina op basis van role
-  // Dit component wordt alleen gerenderd binnen RequireAuth, dus user bestaat.
-  const { getUser } = require("../auth/authService.js");
   const user = getUser();
   if (!user) return <Navigate to="/login" replace />;
   return user.role === "client" ? <ProjectClient /> : <ProjectPM />;
 }
+
 
 export const router = createBrowserRouter([
   {

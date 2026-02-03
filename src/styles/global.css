@@ -30,13 +30,21 @@ a{ color: inherit; text-decoration: none; }
 }
 
 .centerWrap{
+  min-height: calc(100vh - 0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   max-width: 980px;
-  margin: 24px auto;
-  padding: 0 16px 40px;
+  margin: 0 auto;
+  padding: 32px 16px;
 }
 
+
 .loginCard{
-  max-width: 520px;
+ width: 100%;
+  max-width: 560px;
 }
 
 .topbar{
@@ -315,3 +323,27 @@ a{ color: inherit; text-decoration: none; }
 
 .members{ display:flex; gap: 8px; flex-wrap: wrap; justify-content:flex-end; }
 .memberPill{ display:inline-flex; gap: 6px; align-items:center; }
+
+.pageH1, .loginH2{
+  color: #0f172a; /* donkerder, beter leesbaar */
+}
+.muted{
+  color: rgba(30,36,48,.62); /* iets donkerder dan eerst */
+}
+
+.brandMini{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  background: linear-gradient(90deg, var(--nav), var(--nav2));
+  padding: 10px 14px;
+  border-radius: 14px;
+  width: fit-content;
+}
+
+.brandLogo{
+  height: 26px;
+  width: auto;
+  display: block;
+}
+

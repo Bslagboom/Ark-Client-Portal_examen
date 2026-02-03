@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Card from "../components/Card.jsx";
 import Button from "../components/Button.jsx";
 import Input from "../components/Input.jsx";
-import { getClients, getProjects, leading } from "../data/mockData.js";
-import { addProject } from "../data/mockData.js";
+import { getClients, getProjects, addProject } from "../data/mockData.js";
+
 
 export default function DashboardPM() {
   const navigate = useNavigate();

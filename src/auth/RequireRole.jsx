@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { getUser } from "./authService.js";
+import { getUser } from "./authService";
 
 export default function RequireRole({ roles, children }) {
   const user = getUser();
