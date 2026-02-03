@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { getUser, logout } from "../auth/authService.js";
+import logo from "../images/arkdesign-logo-horizontaal-white.png";
+
 
 export default function Topbar() {
   const user = getUser();
@@ -14,8 +16,10 @@ export default function Topbar() {
   return (
     <header className="topbar">
       <div className="brand">
-        <div className="logoTri" />
-        <div className="brandText">ARK DESIGN</div>
+        <img src={logo} alt="Ark Design" className="topbarLogo" />
+      </div>
+      <div className="brand">
+
       </div>
 
       <nav className="nav">

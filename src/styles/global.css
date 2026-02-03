@@ -347,3 +347,8 @@ a{ color: inherit; text-decoration: none; }
   display: block;
 }
 
+.topbarLogo{
+  height: 26px;
+  width: auto;
+  display: block;
+}
