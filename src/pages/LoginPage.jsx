@@ -8,8 +8,8 @@ import logo from "../images/arkdesign-logo-horizontaal-white.png";
 
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("admin@ark.nl");
-  const [password, setPassword] = useState("admin");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
