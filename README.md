@@ -22,8 +22,6 @@ Projecten aanmaken (admin)
 
 Klanten beheren (admin)
 
-Beveiligde routes op basis van gebruikersrol
-
 De applicatie maakt gebruik van mock data in plaats van een database.
 
 Gebruikte technieken
