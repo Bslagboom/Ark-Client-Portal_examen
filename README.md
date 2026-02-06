@@ -1,16 +1,75 @@
-# React + Vite
+Ark Client Portal
+Projectomschrijving
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+De Ark Client Portal is een webapplicatie waarmee klanten en medewerkers van Ark Design projecten kunnen beheren.
+Gebruikers kunnen inloggen en krijgen, afhankelijk van hun rol (klant, projectmanager of admin), toegang tot specifieke functionaliteiten zoals het bekijken van projecten, uploaden van bestanden, plaatsen van feedback en beheren van klanten.
 
-Currently, two official plugins are available:
+Dit project is ontwikkeld als onderdeel van het MBO4 Software Developer examen.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Functionaliteiten
 
-## React Compiler
+Inloggen met rolbepaling (klant / admin)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Dashboard per gebruikersrol
 
-## Expanding the ESLint configuration
+Projecten bekijken en openen
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bestanden uploaden binnen een project
+
+Feedback plaatsen per project
+
+Projecten aanmaken (admin)
+
+Klanten beheren (admin)
+
+Beveiligde routes op basis van gebruikersrol
+
+De applicatie maakt gebruik van mock data in plaats van een database.
+
+Gebruikte technieken
+
+React
+
+React Router
+
+JavaScript (ES6)
+
+CSS
+
+Vite
+
+Git & GitHub/GitLab
+
+Projectstructuur (globaal)
+
+pages/ – Pagina’s (dashboards, login, projectdetails)
+
+components/ – Herbruikbare UI-componenten
+
+auth/ – Authenticatie en autorisatie
+
+data/ – Mock data
+
+styles/ – Globale styling
+
+Installatie & starten
+
+Clone de repository
+
+Installeer dependencies:
+
+npm install
+
+
+Start de applicatie:
+
+npm run dev
+
+
+Open de applicatie in de browser via:
+
+http://localhost:5173
+
+Opmerking
+
+Dit project gebruikt mock data. De structuur is zo opgezet dat deze eenvoudig kan worden uitgebreid met een echte database in de toekomst.
